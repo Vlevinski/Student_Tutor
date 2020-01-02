@@ -1,0 +1,28 @@
+Would you like to enter a student’s information? Type Y for Yes or N for No:n
+False
+[]
+1. Would you like to see a list of registered students?
+2. Would you like to see a class list for specific subject
+3. Would you like to see who your oldest student is?
+4. Would you like to see who your youngest student is?
+Enter number for the selected task, or X to skip this:1
+True
+
+Students registered are:
+Nick Parson
+Jannete Dion
+Celine Carpenter
+
+The students registered for  python  are:
+Nick Parson
+Jannete Dion
+Celine Carpenter
+
+The agest student: 55
+
+The youngent student: is 24
+1. Would you like to see a list of registered students?
+2. Would you like to see a class list for specific subject
+3. Would you like to see who your oldest student is?
+4. Would you like to see who your youngest student is?
+Enter number for the selected task, or X to skip this:
