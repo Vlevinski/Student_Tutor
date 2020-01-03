@@ -1,5 +1,5 @@
 #  Student tasks
-## Learning on the go
+## Learning Python on the go
 
 Usefull links:
 
