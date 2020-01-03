@@ -1,4 +1,0 @@
-sN,fN,lN,age,email,pCourse,x
-1234,Nick,Parson,55,n@email.com,python,False
-3232,Jannete,Dion,24,j@email.com,python,False
-5432,Celine,Carpenter,27,seline@yajhoo.com,python,False
