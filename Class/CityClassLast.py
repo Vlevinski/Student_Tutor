@@ -1,8 +1,8 @@
+#
 # https://stackoverflow.com/questions/47445586/how-to-read-the-contents-of-a-csv-file-into-a-class-with-each-csv-row-as-a-class
-
+#
 
 import csv
-
 
 class City:
     def __init__(self, *kwargs):
