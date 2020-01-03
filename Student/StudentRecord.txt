@@ -1,1 +1,0 @@
-fodselsNummer,firstName,lastName,age,email,programmingCourse
