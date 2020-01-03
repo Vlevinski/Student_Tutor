@@ -18,11 +18,11 @@ class EncodeDecodeClass():
         print(self.firstName, self.lastName)
 
     # encode function to create EncodedStudentRecords.txt
-    def EncodeStudentList():
-        pass
+#    def EncodeStudentList(self):
+#       pass
     # decode function for EncodedStudentRecords.txt
-    def DecodeStudentList():
-        pass
+#    def DecodeStudentList(self):
+#        pass
 
     def digits_encode(self, sin):
         return sin[::-1]
