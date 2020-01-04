@@ -1,3 +1,0 @@
-sN,fN,lN,age,email,pCourse,x
-1234,Nicj,Pann,33,n@email.com,python,False
-3333,Jannete,Dion,22,n@email.com,python,False
