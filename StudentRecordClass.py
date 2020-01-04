@@ -2,7 +2,7 @@
 #     StudentRecordClass to implement Student class,   use python ver3.7
 ####
 
-class Student():
+class StudentRecordsClass():
 
     # class conctructor
     def __init__(self, fodselsNummer, firstName, lastName, age, email, programmingCourse):
@@ -12,6 +12,7 @@ class Student():
         self.age = age
         self.email = email
         self.programmingCourse = programmingCourse
+
 
     # print students full name method
     def DisplayName(self):
