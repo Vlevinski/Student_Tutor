@@ -167,7 +167,7 @@ def createClass():
         reader = csv.reader(f)
         for row in reader:
             studentsList.append(
-                StudentRecordsClass(row[0], row[1], row[2], row[3], row[4], row[5], row[6]))  # parameters
+                StudentRecordsClass(row[0], row[1], row[2], row[3], row[4], row[5]))  # parameters
             studentsData.append(
                 {"sN": row[0], "fN": row[1], "lN": row[2], "age": row[3], "email": row[4], "pCourse": row[5],
                  "x": row[6]})
