@@ -1,4 +1,4 @@
-#  Student project
+#  Student project      (on development)
 
 ## Learning Python on the go
 
