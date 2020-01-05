@@ -1,3 +1,3 @@
-# 1.ObjectOrientedClassMethod
-## Learn howTo create a class
+# Prime functions for Student code Python project
+##
 
