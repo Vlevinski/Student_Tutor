@@ -3,6 +3,8 @@
 ####
 
 from StudentRecordClass import StudentRecordsClass
+import EncodeDecodeClass
+
 import csv
 
 studentsList = []
@@ -161,6 +163,30 @@ def writeStudentRecordsFile():
         print("\n Records file saved")
 
 
+# wrute student recor file entered by admin
+def writeEncodeStudentRecordsFile():
+    with open('EncodedStudentRecords.txt', mode='w') as csv_file:
+        fieldnames = ["fodselsNummer", "firstName", "lastName", "age", "email", "programmingCourse"]
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        writer.writeheader()
+        for item in etemp:  # studentRecords:
+            writer.writerow(item)
+
+
+#        print("\n Records file saved")
+
+# wrute student recor file entered by admin
+def writeDecodeStudentRecordsFile():
+    with open('DecodedStudentRecords.txt', mode='w') as csv_file:
+        fieldnames = ["fodselsNummer", "firstName", "lastName", "age", "email", "programmingCourse"]
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        writer.writeheader()
+        for item in dtemp:  # studentRecords:
+            writer.writerow(item)
+
+
+#        print("\n Records file saved")
+
 # create Class records
 def createClass():
     with open('StudentRecords.txt', 'r') as f:
@@ -173,7 +199,30 @@ def createClass():
                  "x": row[6]})
 
 
+def d_encode(sin):
+    return sin[::-1]
+
+
+def s_encode(strin):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    # take all letters except the first 'shift' characters, and
+    # add those letters to the end instead
+    rotated = alphabet[5:] + alphabet[:5]
+    translate_map = str.maketrans(alphabet, rotated)
+    return strin.lower().translate(translate_map)
+
+
+def s_decode(strin):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    # take all letters except the first 'shift' characters, and
+    # add those letters to the end instead
+    rotated = alphabet[5:] + alphabet[:5]
+    translate_map = str.maketrans(rotated, alphabet)
+    return strin.translate(translate_map)
+
+
 dtemp = []
+etemp = []
 fieldNames = ["fodselsNummer", "firstName", "lastName", "age", "email", "programmingCourse"]
 valid_course = ["python", "java", "php", "c++"]
 
@@ -205,12 +254,25 @@ while dataentry:
     dataentry = startEnterInfo()
     print(dataentry)
 
-print(dtemp)
+# print(dtemp)
 
 # wrte student records file
 if len(dtemp):
     writeStudentRecordsFile()
 
+# create etemp
+for item in dtemp:
+    erow = {}
+    erow["fodselsNummer"] = d_encode(item["fodselsNummer"])
+    erow["firstName"] = s_encode(item["firstName"])
+    erow["lastName"] = s_encode(item["lastName"])
+    erow["age"] = d_encode(item["age"])
+    erow["email"] = s_encode(item["email"])
+    erow["programmingCourse"] = s_encode(item["programmingCourse"])
+    etemp.append(erow)
+
+
+# print("EcodedRecords", etemp)
 
 def main():
     # promps for methods selction
@@ -226,7 +288,19 @@ def main():
         elif fentry == "4":
             DisplayYoungest()
         elif fentry == "x" or fentry == "X":
-            print("\n X is not admitted")
+            #            print("\n X is not admitted")
+            en = EncodeDecodeClass
+            print("StudentsData", studentsData)
+            #             writeEncodeStudentRecordsFile()
+            encodef = en.askEncode()
+            if encodef:
+                writeEncodeStudentRecordsFile()
+                print("Encoded File saved")
+            #             writeDecodeStudentRecordsFile()
+            decodef = en.askDecode()
+            if decodef:
+                writeDecodeStudentRecordsFile()
+                print("Decoded File saved")
         fentry = ask_Propmts()
         print(fentry)
 
