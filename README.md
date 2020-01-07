@@ -4,9 +4,10 @@
 
 ## Files list:
 
-*StudentManagement.py*  
-*StudentRecordClass.py*
-*EncodeDecodeClass.py*
+- *StudentManagement.py*
+- *StudentRecordClass.py*
+- *EncodeDecodeClass.py*
+
 ## Main module
 
 The main file for your project file should be call
