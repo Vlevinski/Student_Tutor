@@ -1,0 +1,10 @@
+fodselsNummer,firstName,lastName,age,email,programmingCourse
+654321,snhp,ufss,33,snhp@jrfnq.htr,udymts
+212321,ofssjyj,xjqq,34,ofssjyj@rfnq.htr,udymts
+51432,ifsnjq,bnsl,22,ifsnjq@rfnq.htr,ofaf
+12354,ofs,hfwwjsgjwl,45,ofgymjgtd@rfnq.htr,h++
+321321,sfshd,ifrj,45,sfshd@jrfnq.htr,udymts
+2111111,mjqjs,ujuxn,24,ujuxnlnwq@dfmtt.htr,udymts
+21233223,hjqnsj,ufss,51,xjqnsjymjlnwqi@dfmtt.htr,ofaf
+543212323,mjqqjs,hwze,51,mjqqjsymjlnwq@rfnq.htr,ofaf
+124312,snhtqj,wtty,51,snhtqj@jrfnq.htr,udymts

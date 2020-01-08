@@ -1,0 +1,10 @@
+fodselsNummer,firstName,lastName,age,email,programmingCourse
+123456,Nick,Pann,33,nick@email.com,python
+123212,Jannete,Sell,43,jannete@mail.com,python
+23415,Daniel,Wing,22,daniel@mail.com,java
+45321,Jan,Carrenberg,54,jabtheboy@mail.com,c++
+123123,Nancy,Dame,54,nancy@email.com,python
+1111112,Helen,Pepsi,42,pepsigirl@yahoo.com,python
+32233212,Celine,Pann,15,selinethegirld@yahoo.com,java
+323212345,Hellen,Cruz,15,hellenthegirl@mail.com,java
+213421,Nicole,Root,15,nicole@email.com,python

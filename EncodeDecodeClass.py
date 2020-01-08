@@ -3,15 +3,8 @@ import csv
 ###
 #    params for writeRecordsFile()
 ###
-#
-#                   field names of StudentRecordsFile.txt
-cnames = ["fodselsNummer", "firstName", "lastName", "age", "email", "programmingCourse"]
-stRedFileName = 'StudentRecords.txt'                    #filename
-stEncRecFileName = 'EncodedStudentRecords.txt'          #filename
-stDecRecFileName = 'DecodedStudentRecords.txt'          #filename
-my_list = []        #list of dicts with records
-my_elist = []       #list of dict  with encoded records
-my_dlist = []       #lidt of dict with decoded records
+
+my_list = []
 
 
 class EncodeDecodeClass:

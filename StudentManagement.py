@@ -8,14 +8,14 @@ import csv
 
 fieldNames = ["fodselsNummer", "firstName", "lastName", "age", "email", "programmingCourse"]
 valid_course = ["python", "java", "php", "c++"]
-my_list = []  # list of dicts with records
-my_elist = []  # list of dict  with encoded records
-my_dlist = []  # lidt of dict with decoded records
+my_list = []  # student records
+my_elist = []  # encoded records
+my_dlist = []  # decoded records
 
-# get old students as StudentRecordsFile  if exist
+# get StudentRecordsFile  if exist
 try:
     students = list(csv.DictReader(open('data/StudentRecords.txt')))
-except Exception:
+except FileNotFoundError:
     students = []
 #    print("New records file created, ")
 print("The file StudentRecordsFile, records: ", len(students))
@@ -23,95 +23,85 @@ print("The file StudentRecordsFile, records: ", len(students))
 
 #   ask to start o finish users data enter
 def startEnterInfo():
-    answer = None
-    while answer != "Y" or answer != "N":
+    while True:
         answer = input("Would you like to enter a student’s information? Type Y for Yes or N for No:")
         answer = answer.upper()
-        if answer == "N":
+        print (answer)
+        if "N" in answer:
             return False
-        elif answer == "Y":
+        elif "Y" in answer:
             return True
         print("\n Oops something is buggy")
 
 
 # ask to enter fodselsNummer
 def ask_fodselsNummer():
-    answer = None
-    while answer != "Y":
+    while True:
         answer = input("Fodselsnummer :")
         ans = answer.isdigit()
-        if ans == True:
+        if ans is True:
             return answer
         print("\n Oops something is buggy")
 
 
 # ask to enter first Name
 def ask_firstName():
-    answer = None
-    while answer != "123":
+    while True:
         answer = input("First name :")
         ans = answer.isalpha()
-        if ans == True:
+        if ans is True:
             return answer.title()
         print("\n Oops something is buggy")
 
 
 # ask to enter last Name
 def ask_lastName():
-    answer = None
-    while answer != "123":
+    while True:
         answer = input("Last name :")
         ans = answer.isalpha()
-        if ans == True:
+        if ans is True:
             return answer.title()
         print("\n Oops something is buggy")
 
 
 # ask to enter User age
 def ask_age():
-    answer = None
-    while answer != "Y":
+    while True:
         answer = input("Age :")
         ans = answer.isdigit()
-        if ans == True:
+        if ans is True:
             return answer
         print("\nOops something is buggy")
 
 
 # ask to enter User email
 def ask_email():
-    answer = None
-    while answer != "Y":
+    while True:
         answer = input("E-mail :")
-        ans = "@" in answer  # and "yahoo.com" in answer
-        if ans == True:
+        if "@" in answer:
             return answer
         print("\n Oops something is buggy")
 
 
 # ask to enter pCourse
 def ask_programmingCourse():
-    valid_course = ["python", "java", "php", "c++"]
-    answer = None
-    while answer != "123":
+    courses = ["python", "java", "php", "c++"]
+    while True:
         answer = input("Programming course :")
         answer = answer.lower()
-        # or "java" in answer or "php" in answer
-        if answer in valid_course:
+        if answer in courses:
             return answer
         print("\n Oops something is buggy")
 
 
 # ask for propts to select function
 def ask_Propmts():
-    answer = None
-    while answer != "None":
+    while True:
         print("\n1. Would you like to see a list of registered students?")
         print("2. Would you like to see a class list for specific subject")
         print("3. Would you like to see who your oldest student is?")
         print("4. Would you like to see who your youngest student is?")
         answer = input("Enter number for the selected task, or X to skip this:")
-        #        answer= answer.upper()
         if answer in ["1", "2", "3", "4", "X", "x"]:
             return answer
         print("\n Oops something is buggy")
@@ -139,27 +129,25 @@ def DisplaySubjectClassList(subjectname):
 # display eldest student
 def DisplayOldest():
     ageRecords = [int(item["age"]) for item in students]
-    max = 1
+    max_v = 1
     for item in ageRecords:
-        if max < item:
-            max = item
+        if max_v < item:
+            max_v = item
     print("\nThe eldes student(s):", end=" ")
-    names = ""
-    [print(item["firstName"], item["lastName"], end=", ") for item in students if int(item["age"]) == max]
-    print(" age", max)
+    [print(item["firstName"], item["lastName"], end=", ") for item in students if int(item["age"]) == max_v]
+    print(" age", max_v)
 
 
 # dispaly yanguest user
 def DisplayYoungest():
     ageRecords = [int(item["age"]) for item in students]
-    min = 100
+    min_v = 100
     for item in ageRecords:
-        if min > item:
-            min = item
+        if min_v > item:
+            min_v = item
     print("\nThe youngest student(s):", end=" ")
-    names = ""
-    [print(item["firstName"], item["lastName"], end=", ") for item in students if int(item["age"]) == min]
-    print(" age", min)
+    [print(item["firstName"], item["lastName"], end=", ") for item in students if int(item["age"]) == min_v]
+    print(" age", min_v)
 
 
 # wrute student recor file entered by admin
@@ -188,8 +176,6 @@ while dataentry:
     print("New record to StidentsRecordsFile.txt,records: ", len(students))
     dataentry = startEnterInfo()
 
-# print(dtemp)
-
 # wrte student records file
 if len(students):
     writeStudentRecordsFile('data/StudentRecords.txt', students)
@@ -210,8 +196,6 @@ def digits_encode(sin):
 # ROT (+5) encode method
 def encode(strin):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    # take all letters except the first 'shift' characters, and
-    # add those letters to the end instead
     rotated = alphabet[5:] + alphabet[:5]
     translate_map = str.maketrans(alphabet, rotated)
     return strin.lower().translate(translate_map)
@@ -220,8 +204,6 @@ def encode(strin):
 # ROT (+5)  decode method
 def decode(strin):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    # take all letters except the first 'shift' characters, and
-    # add those letters to the end instead
     rotated = alphabet[5:] + alphabet[:5]
     translate_map = str.maketrans(rotated, alphabet)
     return strin.translate(translate_map)
@@ -230,7 +212,7 @@ def decode(strin):
 # encode list creation
 def encodeList(ilist, olist):
     for item in ilist:
-        erow = {}
+        erow = dict()
         erow["fodselsNummer"] = digits_encode(item["fodselsNummer"])
         erow["firstName"] = encode(item["firstName"])
         erow["lastName"] = encode(item["lastName"])
@@ -244,7 +226,7 @@ def encodeList(ilist, olist):
 # decode list creation
 def decodeList(ilist, olist):
     for item in ilist:
-        erow = {}
+        erow = dict()
         erow["fodselsNummer"] = digits_encode(item["fodselsNummer"])
         erow["firstName"] = decode(item["firstName"])
         erow["firstName"] = erow["firstName"].capitalize()
@@ -257,7 +239,7 @@ def decodeList(ilist, olist):
     return olist
 
 
-# wrute student records file entered by admin
+# write student records file entered by admin
 def writeRecordsFile(filename, recordsList):
     with open(filename, mode='w') as csv_file:
         fieldnames = ["fodselsNummer", "firstName", "lastName", "age", "email", "programmingCourse"]
@@ -268,45 +250,42 @@ def writeRecordsFile(filename, recordsList):
 
 
 def askEncode():
-    answer = None
-    while answer != "Y" or answer != "N":
+    while True:
         answer = input("Do you want to create an Encrypted version of the file? Type Y for Yes or N for No:")
         answer = answer.upper()
-        if answer == "N":
+        if "N" in answer:
             return False
-        elif answer == "Y":
+        elif "Y" in answer:
             return True
         print("\n Oops something is buggy")
 
 
 def askDecode():
-    answer = None
-    while answer != "Y" or answer != "N":
+    while True:
         answer = input("Do you want to create an Decripted version of the file? Type Y for Yes or N for No:")
         answer = answer.upper()
-        if answer == "N":
+        if "N" in answer:
             print("The assessment is over. Have a nice day.")
             exit(0)
-        elif answer == "Y":
+        elif "Y" in answer:
             return True
         print("\n Oops something is buggy")
 
 
 def main():
-    # promps and act, x and Y..,Y... - Finish
     fentry = ask_Propmts()
     print(fentry)
     while fentry:
-        if fentry == "1":
+        if fentry is "1":
             DisplayAllStudents()
-        elif fentry == "2":
+        elif fentry is "2":
             DisplaySubjectClassList('python')
-        elif fentry == "3":
+        elif fentry is "3":
             DisplayOldest()
-        elif fentry == "4":
+        elif fentry is "4":
             DisplayYoungest()
-        elif fentry == "x" or fentry == "X":
-            en = EncodeDecodeClass
+        elif fentry is "x" or fentry is "X":
+            # en = EncodeDecodeClass
             encodef = askEncode()
             if encodef:
                 encodeList(students, my_elist)
