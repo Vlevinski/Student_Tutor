@@ -20,14 +20,7 @@ class Student:
 
 
 # create a class instance
-student = Student()
-
-# set-up values of class parameters
-student.sN = "123456"
-student.fN = "Nick"
-student.lN = "Pann"
-student.age = 33
-student.email = "nick@yahoo.com"
+student = Student("123456", "Nick", "Pann", 33, "nicktheboy@yahoo.com", "python")
 
 # call of class method
 student.DisplayName()
@@ -35,6 +28,7 @@ student.DisplayName()
 ###
 #  sys.out
 ###
+
 #
 # run the program with python with following command:
 # python StudentRecords,py
