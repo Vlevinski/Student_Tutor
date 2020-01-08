@@ -1,6 +1,6 @@
 #!python3.7
 ####
-#     StudentRecordClass to implement Student_functions class,   use python ver3.7
+#     StudentRecordClass to implement methods class,   use python ver3.7
 ####
 
 
