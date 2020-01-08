@@ -29,6 +29,5 @@ class EncodeDecodeClass:
     def DecodeStudentList(self):
         pass
 
+
 print("EncodeDecodeClass is available")
-
-
