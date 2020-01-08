@@ -1,5 +1,5 @@
 ###
-#   create record file Student_functions Records.txt
+#   create record file methods Records.txt
 ###
 
 
