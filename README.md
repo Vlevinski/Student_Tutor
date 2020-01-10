@@ -43,5 +43,5 @@ necessary. This code should be created in a separate
 **EncodeDecodeClass**. In a separate .py file called
 **EncodeDecodeClass.py**.
 
-
+![Student_image.png](Student_image.png)
 
