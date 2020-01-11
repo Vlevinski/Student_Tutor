@@ -18,12 +18,20 @@ class Student:
     def DisplayName(self):
         print(self.fN, self.lN)
 
+    # class to json
+    def toJSON(self):
+        import json
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True, indent=4)
+
 
 # create a class instance
 student = Student("123456", "Nick", "Pann", 33, "nicktheboy@yahoo.com", "python")
 
+
 # call of class method
 student.DisplayName()
+#print(student.toJSON())
 
 ###
 #  sys.out
