@@ -2,6 +2,9 @@
 
 ## Learning Python on the go
 
+Simple project to check regular python code knowledge at one University
+in Sweden
+
 ## Files list:
 
 - *StudentManagement.py*
