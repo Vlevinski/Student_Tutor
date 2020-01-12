@@ -8,3 +8,4 @@ fodselsNummer,firstName,lastName,age,email,programmingCourse
 32233212,Celine,Pann,15,selinethegirld@yahoo.com,java
 323212345,Hellen,Cruz,15,hellenthegirl@mail.com,java
 213421,Nicole,Root,15,nicole@email.com,python
+1234567,Nick,Petrescu,18,nicktheboy@email.com,python
