@@ -10,6 +10,7 @@ in Sweden
 - *StudentManagement.py*
 - *StudentRecordClass.py*
 - *EncodeDecodeClass.py*
+- *Student_configurator*
 
 ## Main module
 
@@ -45,6 +46,9 @@ the instance of this new class within **StudentManagement.py** as
 necessary. This code should be created in a separate
 **EncodeDecodeClass**. In a separate .py file called
 **EncodeDecodeClass.py**.
+
+# StudentCongigurator
+    - congigParser module
 
 ![Student_image.png](Student_image.png)
 
