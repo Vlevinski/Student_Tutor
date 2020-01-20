@@ -10,7 +10,7 @@ in Sweden
 - *StudentManagement.py*
 - *StudentRecordClass.py*
 - *EncodeDecodeClass.py*
-- *Student_configurator*
+- *Student_configurator.py*
 
 ## Main module
 
