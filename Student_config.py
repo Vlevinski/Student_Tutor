@@ -19,6 +19,6 @@ config = configparser.ConfigParser()
 config.read_string(cfg_data)
 
 # write to filr
-with open('conf/liteDB.ini', 'w') as config_file:
+with open('conf/DB.ini', 'w') as config_file:
     config.write(config_file)
 
