@@ -15,5 +15,5 @@ class Circle(Figure):
     def method(self):
         return self.two
 
-my_object = Circle('Jetty')
+my_object = Circle('Tor')
 print(Circle.__mro__)
