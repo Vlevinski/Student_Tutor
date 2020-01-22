@@ -1,9 +1,7 @@
 #  Student project      (on development)
 
 ## Learning Python on the go
-
-Simple project to check regular python code knowledge at one University
-in Sweden
+Simple project for regular python code knowledge test
 
 ## Files list:
 
@@ -11,6 +9,8 @@ in Sweden
 - *StudentRecordClass.py* - class definition of project data
 - *EncodeDecodeClass.py* - project data with encoded/decoded data
 - *Student_configurator.py* - create *.ini file with config data
+
+![Student_image.png](Student_image.png)
 
 ## Main module
 
@@ -53,5 +53,4 @@ necessary. This code should be created in a separate
 **/conf** - config data
 **/data** - project data
 
-![Student_image.png](Student_image.png)
 
