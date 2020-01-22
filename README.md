@@ -7,10 +7,10 @@ in Sweden
 
 ## Files list:
 
-- *StudentManagement.py*
-- *StudentRecordClass.py*
-- *EncodeDecodeClass.py*
-- *Student_configurator.py*
+- *StudentManagement.py* - ask options, write file, encode/decode data
+- *StudentRecordClass.py* - class definition of project data
+- *EncodeDecodeClass.py* - project data with encoded/decoded data
+- *Student_configurator.py* - create *.ini file with config data
 
 ## Main module
 
@@ -47,9 +47,11 @@ necessary. This code should be created in a separate
 **EncodeDecodeClass**. In a separate .py file called
 **EncodeDecodeClass.py**.
 
-## StudentCongigurator
+## Utilities
 
-    - congigParser module
+**Student_config.py**    - congigParser module
+**/conf** - config data
+**/data** - project data
 
 ![Student_image.png](Student_image.png)
 
