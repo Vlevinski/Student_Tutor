@@ -5,3 +5,4 @@
 - **classToJson** - print classs in Json format
 - **superClass.py** - why super() in Python is for ?
 
+    ![superClass.png](superClass.png)

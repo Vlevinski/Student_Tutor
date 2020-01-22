@@ -15,4 +15,7 @@ class Circle(Figure):
 
 # class inheritance
 my_draw = Circle('Tor')
+print (my_draw.one)
+print ( my_draw.two)
+print (my_draw.method())
 print(Circle.__mro__)
