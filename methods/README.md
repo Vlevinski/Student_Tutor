@@ -1,4 +1,4 @@
-## Prime functions for Student code Python project
+## Prime functions for project
 
 - **askDigit.py** - get digits variable dialog
 - **askYesNo.py** - get Yes/No dialog
