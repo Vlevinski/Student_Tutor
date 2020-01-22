@@ -8,12 +8,10 @@ class Figure(object):
 
 class Circle(Figure):
     def __init__(self, two):
-        super().__init__(self)
+        Figure.__init__(self,two)
         print("Circle init called.")
         self.two = two
 
-    def method(self):
-        return self.two
-
-my_object = Circle('Tor')
+my_draw = Circle('Tor')
+print(my_draw.method())
 print(Circle.__mro__)
