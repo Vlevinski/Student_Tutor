@@ -26,20 +26,5 @@ class Student:
 
 
 # create a class instance
-student = Student("123456", "Nick", "Pann", 33, "nicktheboy@yahoo.com", "python")
+#student = Student("123456", "Nick", "Pann", 33, "nicktheboy@yahoo.com", "python")
 
-
-# call of class method
-student.DisplayName()
-#print(student.toJSON())
-
-###
-#  sys.out
-###
-
-#
-# run the program with python with following command:
-# python StudentRecords,py
-# You will see the result:
-#
-# ---> Nick Pann
