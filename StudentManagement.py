@@ -196,18 +196,12 @@ def digits_encode(sin):
 
 # ROT (+5) encode method
 def encode(strin):
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    rotated = alphabet[5:] + alphabet[:5]
-    translate_map = str.maketrans(alphabet, rotated)
-    return strin.lower().translate(translate_map)
+    return strin.lower()
 
 
 # ROT (+5)  decode method
 def decode(strin):
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    rotated = alphabet[5:] + alphabet[:5]
-    translate_map = str.maketrans(rotated, alphabet)
-    return strin.translate(translate_map)
+    return strin
 
 
 # encode list creation
