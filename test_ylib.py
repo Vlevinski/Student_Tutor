@@ -3,4 +3,4 @@
 
 from ylib import csv_info
 
-csv_info("ycsv/data/one.csv")
+csv_info("data/simple.csv")
