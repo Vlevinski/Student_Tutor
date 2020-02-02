@@ -1,7 +1,8 @@
-# linkof turorial: https://pythonguide.readthedocs.io/en/latest/python/oops.html#shipping-product-and-agile-methodology
+# link of turorial: https://pythonguide.readthedocs.io/en/latest/python/oops.html#shipping-product-and-agile-methodology
 
 
 import math
+
 
 class Ring(object):
     """ Here we will see the actual logic behind various pieces of Python
