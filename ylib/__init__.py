@@ -11,11 +11,9 @@ def j_print(obj):
     print(text)
 
 
-def get_names():
-    # two filenames by default
-    one = "data/one.csv"
-    two = "data/two.csv"
-    return one, two
+def set_names(csv1="data/one.csv", csv2="data/two.csv"):
+    # two csv filenames by default
+    return csv1, csv2
 
 
 def yclear(row):
