@@ -5,6 +5,8 @@ Python.
 
 **Directories:**
 
-    *Tutor* - simple [app](Student_image.png) with input and file creation
+    *Tutor* - simple app with input and file creation
     *yclass* - simple and improved class example  
     *ylib* - good coding styles modules
+
+![Tutor app](Student_image.png)
