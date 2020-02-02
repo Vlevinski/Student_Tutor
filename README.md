@@ -1,4 +1,4 @@
-#  Student project      (on development)
+#  Tutor project      (on development)
 
 ## Learning Python on the go
 Simple project for regular python code knowledge test
