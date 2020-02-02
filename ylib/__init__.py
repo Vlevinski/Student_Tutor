@@ -16,13 +16,13 @@ def set_names(csv1="data/one.csv", csv2="data/two.csv"):
     return csv1, csv2
 
 
-def yclear(row):
-    # strip a string row
+def strip_clear(row):
+    # strip strings in the list
     return [str.strip(item) for item in row]
 
 
 def str_row(row):
-    # join string with \n at end
+    # join string with \n at the end
     return ",".join(row) + "\n"
 
 
@@ -38,11 +38,9 @@ def write_csv(j_list, filename):
 
 
 def csv_info(name):
-    # coount rows and  names of csv file
+    # count rows and  names of csv file
     dt = list(csv.reader(open(name)))
     rows = len(dt)
     names = len(dt[0])
-    print("File: ", name)
-    print("rows: ", rows)
-    print("names:", names)
+    print("\nFile: ", name,"\nrows: ", rows,"\nnames:", names)
     return name, rows, names
