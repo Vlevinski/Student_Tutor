@@ -20,7 +20,7 @@ class Ring(object):
         return math.pi * self.radius ** 2
 
     def value(self):
-        print("Date: ", self.date, "metal: ", self.metal, "cost: ", self.cost(), "area: ", self.area())
+        print("Date: ", self.date, "metal: ", self.metal, "cost: ", self.cost(), "area: ", round(self.area(),2))
 
 
 '''
