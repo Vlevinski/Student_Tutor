@@ -6,3 +6,4 @@ Content :
 - test_b - example of class clasic usage
 - test_a - example of class short usage
 - class_c - reading csv file into class intances
+- class_d - super() function and Multiple Resolution Order
