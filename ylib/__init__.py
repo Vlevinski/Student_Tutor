@@ -4,6 +4,18 @@
 import csv
 
 
+def ylib_help():
+    return ''' Library modules: 
+    - print json                        j_print(obj)                                        
+    - set names to clear csv            set_names(csv1="data/one.csv", csv2="data/two.csv") 
+    - strip list of items               strip_clear(row)                                   
+    - join items of the list            str_row(row)                                        
+    - load csv file as list of rows     read_csv(name)                                      
+    - write list of rows to file        write_csv(j_list, filename)                         
+    - get general info of csv file      def csv_info(name)                                  
+    '''
+
+
 def j_print(obj):
     import json
     # create a formatted string of the Python JSON object
@@ -42,5 +54,5 @@ def csv_info(name):
     dt = list(csv.reader(open(name)))
     rows = len(dt)
     names = len(dt[0])
-    print("\nFile: ", name,"\nrows: ", rows,"\nnames:", names)
+    print("\nFile: ", name, "\nrows: ", rows, "\nnames:", names)
     return name, rows, names
