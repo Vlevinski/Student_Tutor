@@ -3,12 +3,6 @@
 
 from prettytable import PLAIN_COLUMNS, HTMLParser, PrettyTable
 
-def create_pt(data):
-    x.field_names = data[0]
-    for idx in data[1:]:
-        x.add_row(idx)
-
-x = PrettyTable()
 
 dt = [["City name", "Area", "Population", "Annual Rainfall"],
         ["Adelaide", 1295, 1158259, 600.5],
@@ -19,5 +13,11 @@ dt = [["City name", "Area", "Population", "Annual Rainfall"],
         ["Melbourne", 1566, 3806092, 646.9],
         ["Perth", 5386, 1554769, 869.4]]
 
+def create_pt(data):
+    x.field_names = data[0]
+    for idx in data[1:]:
+        x.add_row(idx)
+
+x = PrettyTable()
 create_pt(dt)
 print(x)
