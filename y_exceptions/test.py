@@ -9,4 +9,4 @@ except EOFError as e:
     raise e
 except IOError as e:
     print("An error occurred.")
-    raise e
+#   raise e  #in case
