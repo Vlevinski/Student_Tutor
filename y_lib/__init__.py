@@ -3,7 +3,7 @@
 
 import csv
 
-
+#srip rows of csv file
 def ylib_help():
     return ''' Library modules: 
     - print json                        j_print(obj)                                        
