@@ -11,4 +11,15 @@ def get_wordlist(x):
             'quux')
 
 
+def get_index(words, el):
+    return words.index(el)
+
+
+def get_word(words,idx):
+    return words[idx]
+
+'''
 print([get_wordlist(random.randint(1, 4)) for item in range(10)])
+print (get_index(['bar', 'foo', 'baz', 'qux', 'quux'],'qux'))
+print (get_word(['bar', 'foo', 'baz', 'qux', 'quux'],3))
+'''
