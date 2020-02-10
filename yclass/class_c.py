@@ -35,13 +35,14 @@ with open('data/simple.csv', 'r') as f:
         def __init__(self, **fields):
             self.__dict__.update(**fields)
 
-        def __repr__(self):  # Added to make printing instances show their contents.
+        # Added to make printing instances show their contents.
+        def __repr__(self):
             fields = ', '.join(('{}={!r}'.format(fieldname, getattr(self, fieldname))
                                 for fieldname in fieldnames))
             return '{}({})'.format(self.__class__.__name__, fields)
 
 
-    # read rows of **fields
+    # read rows  **fields
     rows = [Rows(**row) for row in reader]
 
 # example of usage
