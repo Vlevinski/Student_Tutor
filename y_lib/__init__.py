@@ -4,7 +4,7 @@
 import csv
 
 #srip rows of csv file
-def ylib_help():
+def y_lib_help():
     return ''' Library modules: 
     - print json                        j_print(obj)                                        
     - set names to clear csv            set_names(csv1="data/one.csv", csv2="data/two.csv") 
