@@ -41,11 +41,11 @@ def r_one():
     return random.choice(s)
 
 
-def rname():
+def r_rname():
     s = ["Nick", "Peter", "John", "Nick", "Andrew", "Paul", "Cris", "David", "Robert", "Richard", "Mark"]
     return random.choice(s)
 
 
-def sname():
-    s = ["Smith", "johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor"]
+def r_sname():
+    s = ["Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor"]
     return random.choice(s)

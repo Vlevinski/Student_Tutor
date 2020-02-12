@@ -9,5 +9,5 @@ r_random()          - get float in range 0.0 1.0
 r_number(a, b)      - return float number in range a,b:
 
 r_one    - textual figuire name (0-9)
-rname()  - men names choice
-sname()  - men surname choice
+r_rname()  - men names choice
+r_sname()  - men surname choice
