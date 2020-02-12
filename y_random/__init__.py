@@ -34,3 +34,13 @@ def r_random():
 def r_number(a, b):
     # return float number in range a,b:
     return random.uniform(a, b)
+
+
+def r_one():
+    s = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "zero"]
+    return random.choice(s)
+
+
+def rname():
+    s = ["Nick", "Peter", "John", "Nick", "Andrew", "Paul", "Cris", "David", "Robert", "Richard", "Mark"]
+    return random.choice(s)
