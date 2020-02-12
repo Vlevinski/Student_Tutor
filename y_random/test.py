@@ -22,8 +22,10 @@ print("Init: done")
 
 table_size = [5, 9]
 column = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+
 cls = get_cols(5)
 cls.sort()
+names = ([column[i] for i in cls])
 
 print(cls)
-print([column[i] for i in cls])
+print(names)
