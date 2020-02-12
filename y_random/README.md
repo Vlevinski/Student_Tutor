@@ -10,3 +10,4 @@ r_number(a, b)      - return float number in range a,b:
 
 r_one    - textual figuire name (0-9)
 rname()  - men names choice
+sname()  - men surname choice

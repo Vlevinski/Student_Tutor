@@ -44,3 +44,8 @@ def r_one():
 def rname():
     s = ["Nick", "Peter", "John", "Nick", "Andrew", "Paul", "Cris", "David", "Robert", "Richard", "Mark"]
     return random.choice(s)
+
+
+def sname():
+    s = ["Smith", "johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor"]
+    return random.choice(s)
