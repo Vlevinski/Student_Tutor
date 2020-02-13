@@ -3,21 +3,31 @@
 #  The main project file:  StudentManagement.py
 ###
 
-from StudentRecordClass import StudentRecordsClass
-import EncodeDecodeClass
+from Python.StudentRecordClass import StudentRecordsClass
+import Python.EncodeDecodeClass
 import csv
 
-fieldNames = ["fodselsNummer", "firstName", "lastName", "age", "email", "programmingCourse"]
-valid_course = ["python", "java", "php", "c++"]
-my_list = []  # student records
-my_elist = []  # encoded records
-my_dlist = []  # decoded records
+fieldNames = ["fodselsNummer",
+              "firstName",
+              "lastName",
+              "age",
+              "email",
+              "programmingCourse"]
+valid_course = ["python",
+                "java",
+                "php",
+                "c++"]
+# student records, encoded records, decoded records
+my_list = []
+my_elist = []
+my_dlist = []
 
 # get StudentRecordsFile  if exist
 try:
     students = list(csv.DictReader(open('data/StudentRecords.txt')))
 except FileNotFoundError:
     students = []
+
 #    print("New records file created, ")
 print("The file StudentRecordsFile, records: ", len(students))
 
