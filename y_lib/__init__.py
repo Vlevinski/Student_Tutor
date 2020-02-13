@@ -21,6 +21,7 @@ def j_print(obj):
     # create a formatted string of the Python JSON object
     text = json.dumps(obj, sort_keys=True, indent=4)
     print(text)
+    return True
 
 
 def set_names(csv1="data/one.csv", csv2="data/two.csv"):
@@ -47,6 +48,7 @@ def write_csv(j_list, filename):
     # write file as textual
     with open(filename, "w") as f:
         [f.write(str_row(row)) for row in j_list]
+    return True
 
 
 def csv_info(name):
