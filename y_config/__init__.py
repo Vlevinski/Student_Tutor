@@ -22,10 +22,8 @@ def set_dict(conf, name):
     return conf.read_dict(name)
 
 
-def show_config(conf, name):
+def show_config(conf):
     # print config
-    if name is None:
-        name = 'conf'
     for section_name in conf.sections():
         print('Section:', section_name)
         print('  Options:', conf.options(section_name))
