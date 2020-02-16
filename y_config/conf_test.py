@@ -10,6 +10,6 @@ config = configparser.ConfigParser()
 
 # write_conf(config, path)
 
-# config.read(path)
+#config.read(path)
 
 show_config(config)
