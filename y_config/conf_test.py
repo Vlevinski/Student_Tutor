@@ -2,14 +2,34 @@ from y_config import *
 import configparser
 
 path = "conf.ini"
-config = configparser.ConfigParser()
+conf = configparser.ConfigParser()
 
-# create demo config
-#cfg = set_string()
-#config.read_string(cfg)
+sec1 = '''
+[default]
+one = 1
+two = 27/01/01
+three = False
+four = "Yes, it is"
+'''
 
-# write_conf(config, path)
+cfg = set_string(conf, sec1)
 
-#config.read(path)
+# conf.read_string(cfg)
 
-show_config(config)
+
+# conf.read(conf, path)
+
+show_config(conf, 'sqlite')
+
+sec2 = '''
+[section1]
+one = 2
+two = 28/01/01
+three = True
+four = "No, it not"
+'''
+
+set_string(conf, sec2)
+show_config(conf, 'sqlite')
+
+write_conf(conf, path)
