@@ -1,5 +1,4 @@
-Welcome to googlesearch with Python example
-     
+# googlesearch with Pyrhon app
      more: https://python-googlesearch.readthedocs.io/en/latest/
      
      CReate Pythob script:
